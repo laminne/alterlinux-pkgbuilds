@@ -2,7 +2,7 @@
 
 pkgname=alterlinux-calamares
 pkgver=3.2.18
-pkgrel=2
+pkgrel=3
 # _commit=178a11a695a3b38f14285df8f1fd41ea8cfdb03f
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
