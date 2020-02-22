@@ -1,8 +1,8 @@
 # Maintainer: SereneTeam
 
 pkgname=alterlinux-calamares
-pkgver=3.2.20
-pkgrel=1
+pkgver=3.2.19
+pkgrel=2
 # _commit=178a11a695a3b38f14285df8f1fd41ea8cfdb03f
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
@@ -18,8 +18,8 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-#source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
-source+=("$url/archive/$pkgver.tar.gz")
+source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
+#source+=("$url/archive/$pkgver.tar.gz")
 
 sha256sums=('SKIP')
 
@@ -53,6 +53,7 @@ build() {
 package() {
     cd ${srcdir}/${pkgname}-${pkgver}/build
     make DESTDIR="$pkgdir" install
+    install -Dm755 "../data/cleaning.sh" "$pkgdir//usr/share/calamares/cleaning.sh"
     install -Dm644 "../data/alter-icon.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/calamares.svg"
     install -Dm644 "../data/calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
     install -Dm755 "../data/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
