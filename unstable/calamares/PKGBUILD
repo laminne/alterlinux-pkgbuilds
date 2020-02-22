@@ -1,8 +1,8 @@
 # Maintainer: SereneTeam
 
 pkgname=alterlinux-calamares
-pkgver=3.2.18
-pkgrel=3
+pkgver=3.2.20
+pkgrel=1
 # _commit=178a11a695a3b38f14285df8f1fd41ea8cfdb03f
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
@@ -18,23 +18,15 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
-#source+=("$url/archive/&pkgver.tar.gz")
+#source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
+source+=("$url/archive/&pkgver.tar.gz")
 
 sha256sums=('SKIP')
 
 prepare() {
-    mv ${srcdir}/${pkgname}-${pkgver}-${pkgrel} ${srcdir}/${pkgname}-${pkgver}
+    # mv ${srcdir}/${pkgname}-${pkgver}-${pkgrel} ${srcdir}/${pkgname}-${pkgver}
     cd ${srcdir}/${pkgname}-${pkgver}
     sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' CMakeLists.txt
-
-    # patches here
-
-    # # change version
-    # _ver="$(cat CMakeLists.txt | grep -m3 -e "  VERSION" | grep -o "[[:digit:]]*" | xargs | sed s'/ /./g')"
-    # printf 'Version: %s-%s' "${_ver}" "${pkgrel}"
-    # sed -i -e "s|\${CALAMARES_VERSION_MAJOR}.\${CALAMARES_VERSION_MINOR}.\${CALAMARES_VERSION_PATCH}|${_ver}-${pkgrel}|g" CMakeLists.txt
-    # sed -i -e "s|CALAMARES_VERSION_RC 1|CALAMARES_VERSION_RC 0|g" CMakeLists.txt
 
     # change branding
     sed -i -e "s/default/alter/g" src/branding/CMakeLists.txt
