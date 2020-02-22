@@ -19,7 +19,7 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
 #source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
-source+=("$url/archive/&pkgver.tar.gz")
+source+=("$url/archive/$pkgver.tar.gz")
 
 sha256sums=('SKIP')
 
