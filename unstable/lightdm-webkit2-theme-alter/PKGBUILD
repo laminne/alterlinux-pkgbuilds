@@ -20,7 +20,6 @@ pkgver() {
 }
 
 build () {
-    cd "${_pkgname}"
     function remove () {
         local _list
         local _file
@@ -33,6 +32,8 @@ build () {
             fi
         done
     }
+    remove usr
+    cd "${_pkgname}"
     remove ${_pkgname}
     remove .git
     remove README.md
