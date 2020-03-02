@@ -12,7 +12,7 @@ depends=('lightdm' 'lightdm-webkit2-greeter')
 optdepends=()
 source=("git+https://github.com/SereneTeam/lightdm-webkit2-theme-alter.git")
 md5sums=('SKIP')
-conflicts=()
+conflicts=('lightdm-webkit2-theme-alter')
 
 pkgver() {
     cd "${_pkgname}"
