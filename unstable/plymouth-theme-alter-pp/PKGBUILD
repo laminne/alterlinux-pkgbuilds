@@ -13,7 +13,7 @@ license=('GPL')
 depends=('plymouth')
 optdepends=()
 source=("${url}/archive/${pkgver}.zip")
-md5sums=('SKIP')
+md5sums=('6583b328581df987c6b22bfcc815dc13')
 conflicts=('plymouth-theme-alter-pp-git')
 
 
