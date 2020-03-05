@@ -1,7 +1,7 @@
-# Maintainer: Yamada Hayao <hayao@fascode.net>
+# Maintainer: Yamada Hayao <development@fascode.net>
 
 pkgname=alterlinux-calamares
-pkgver=v3.2.18.r447.gb9419faa8
+pkgver=v3.2.20
 pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
@@ -10,14 +10,13 @@ url="https://github.com/SereneTeam/alterlinux-calamares"
 license=('LGPL')
 depends=('kconfig' 'kcoreaddons' 'kiconthemes' 'ki18n' 'kio' 'solid' 'yaml-cpp' 'kpmcore'
          'boost-libs' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gtk-update-icon-cache' 'plasma-framework'
-         'qt5-xmlpatterns' 'squashfs-tools') # 'pythonqt>=3.2')
+         'qt5-xmlpatterns' 'squashfs-tools')
 makedepends=('extra-cmake-modules' 'qt5-tools' 'qt5-translations' 'git' 'boost')
 backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/displaymanager.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-# source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
 source=('git+https://github.com/SereneTeam/alterlinux-calamares.git')
 #source+=("$url/archive/$pkgver.tar.gz")
 
@@ -42,7 +41,7 @@ build() {
     mkdir -p build
     cd build
         cmake .. \
-              -DCMAKE_BUILD_TYPE=Debug \
+              -DCMAKE_BUILD_TYPE=Release \
               -DCMAKE_INSTALL_PREFIX=/usr \
               -DCMAKE_INSTALL_LIBDIR=lib \
               -DWITH_PYTHONQT:BOOL=ON \
