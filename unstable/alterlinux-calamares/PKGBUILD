@@ -52,7 +52,7 @@ build() {
 package() {
     cd ${srcdir}/${pkgname}-${pkgver}/build
     make DESTDIR="$pkgdir" install
-    install -Dm755 "../data/cleaning.sh" "$pkgdir/usr/share/calamares/cleaning.sh"
+    install -Dm755 "../data/final-process" "$pkgdir/usr/share/calamares/final-process"
     install -Dm644 "../data/alter-icon.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/calamares.svg"
     install -Dm644 "../data/calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
     install -Dm755 "../data/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
