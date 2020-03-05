@@ -1,4 +1,4 @@
-# Maintainer: SereneTeam
+# Maintainer: lap1sid <development@fascode.net>
 
 pkgname=alterlinux-calamares
 pkgver=3.2.20
@@ -10,7 +10,7 @@ url="https://github.com/SereneTeam/alterlinux-calamares"
 license=('LGPL')
 depends=('kconfig' 'kcoreaddons' 'kiconthemes' 'ki18n' 'kio' 'solid' 'yaml-cpp' 'kpmcore'
          'boost-libs' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gtk-update-icon-cache' 'plasma-framework'
-         'qt5-xmlpatterns' 'squashfs-tools') # 'pythonqt>=3.2')
+         'qt5-xmlpatterns' 'squashfs-tools')
 makedepends=('extra-cmake-modules' 'qt5-tools' 'qt5-translations' 'git' 'boost')
 backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/displaymanager.conf'
@@ -23,6 +23,7 @@ source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
 sha256sums=('SKIP')
 
 prepare() {
+	# rename
     mv ${srcdir}/${pkgname}-${pkgver}-${pkgrel} ${srcdir}/${pkgname}-${pkgver}
     cd ${srcdir}/${pkgname}-${pkgver}
     sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' CMakeLists.txt
@@ -37,7 +38,7 @@ build() {
     mkdir -p build
     cd build
         cmake .. \
-              -DCMAKE_BUILD_TYPE=Debug \
+              -DCMAKE_BUILD_TYPE=Release \
               -DCMAKE_INSTALL_PREFIX=/usr \
               -DCMAKE_INSTALL_LIBDIR=lib \
               -DWITH_PYTHONQT:BOOL=ON \
