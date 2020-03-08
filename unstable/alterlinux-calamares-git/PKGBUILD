@@ -1,6 +1,6 @@
 # Maintainer: Yamada Hayao <development@fascode.net>
 
-pkgname=alterlinux-calamares
+pkgname=alterlinux-calamares-git
 pkgver=v3.2.20
 pkgrel=1
 pkgdesc='Distribution-independent installer framework'
