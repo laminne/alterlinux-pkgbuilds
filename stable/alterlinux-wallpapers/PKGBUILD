@@ -1,2 +1,14 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
+pkgname=alterlinux-wallpapers
+pkgver=1.0
+pkgrel=1
+pkgdesc='AlterLinux wallpapers'
+arch=('any')
+url='https:/fascode.net'
+source=("alter.png")
+sha256sums=('SKIP')
+package() {
+    cd "${srcdir}"
+    install -Dm644 "${srcdir}/alter.png" "${pkgdir}/usr/share/backgrounds/alter.png"
+}
