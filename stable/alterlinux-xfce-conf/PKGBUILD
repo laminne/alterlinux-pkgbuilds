@@ -1,2 +1,20 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
+pkgname=alterlinux-xfce-conf
+pkgver=1.0
+pkgrel=1
+pkgdesc='AlterLinux Xfce Settings'
+arch=('any')
+url='https:/fascode.net'
+source=(".config.tar.gz"
+        ".xprofile")
+depends=('alterlinux-wallpapers')
+sha256sums=('SKIP'
+            'SKIP')
+package() {
+    cd "${srcdir}"
+    install -Dm644 "${srcdir}/.xprofile" "${pkgdir}/etc/skel/.xprofile"
+    mkdir -p ${pkgdir}/etc/skel/.config
+    cp -r "${srcdir}/.config" "${pkgdir}/etc/skel/"
+    chmod 755 -R ${pkgdir}/etc/skel/.config/*
+}
