@@ -1,19 +1,25 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
 
-pkgname=alterlinux-xfce-conf-jp
-_pkgname=alterlinux-xfce-conf
-pkgver=1.0
-_pkgver="${pkgver}-jp"
+_pkgname=alterlinux-fcitx-conf
+pkgname=alterlinux-fcitx-conf-git
+pkgver=r2.904c714
 pkgrel=1
-pkgdesc='AlterLinux Xfce Settings'
+pkgdesc='AlterLinux fcitx Settings'
 arch=('any')
 url='https:/fascode.net'
-source=("https://github.com/SereneTeam/${_pkgname}/archive/v${pkgver}-jp.zip")
+source=('git+https://github.com/SereneTeam/alterlinux-fcitx-conf.git')
 depends=('alterlinux-wallpapers')
-conflicts=("alterlinux-xfce-conf" "alterlinux-xfce-conf-git" "alterlinux-xfce-conf-jp-git")
+conflicts=("alterlinux-fcitx-conf")
 sha256sums=('SKIP')
 
+pkgver() {
+    cd "${_pkgname}"
+    (   set -o pipefail
+        git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    )
+}
 
 build () {
     function remove () {
@@ -37,11 +43,10 @@ build () {
         fi
     }
     mkdir -p ${srcdir}/etc/skel/.config
-    cp -r ${srcdir}/${_pkgname}-${_pkgver}/* ${srcdir}/etc/skel/.config
-    copy ${srcdir}/${_pkgname}-${_pkgver}/.xinitrc ${srcdir}/etc/skel/
-    copy ${srcdir}/${_pkgname}-${_pkgver}/.xprofile ${srcdir}/etc/skel/
-    remove ${srcdir}/${_pkgname}-${_pkgver}
-    rm v${_pkgver}.zip
+    remove "${srcdir}/${_pkgname}/.git"
+    cp -r ${srcdir}/${_pkgname}/* ${srcdir}/etc/skel/.config
+    copy ${srcdir}/${pkgname}/.xprofile ${srcdir}/etc/skel/
+    remove ${srcdir}/${_pkgname}
 }
 
 package () {
