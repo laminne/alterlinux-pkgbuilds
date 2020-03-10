@@ -42,9 +42,9 @@ build () {
             cp -r $1 $2
         fi
     }
-    mkdir -p ${srcdir}/etc/skel/
+    mkdir -p ${srcdir}/etc/skel/.config
     remove "${srcdir}/${_pkgname}/.git"
-    cp -r ${srcdir}/${_pkgname}/* ${srcdir}/etc/skel/
+    cp -r ${srcdir}/${_pkgname}/* ${srcdir}/etc/skel/.config
     copy ${srcdir}/${_pkgname}/.xinitrc ${srcdir}/etc/skel/
     copy ${srcdir}/${_pkgname}/.xprofile ${srcdir}/etc/skel/
     remove ${srcdir}/${_pkgname}
