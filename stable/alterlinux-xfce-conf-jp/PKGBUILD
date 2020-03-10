@@ -10,7 +10,7 @@ pkgdesc='AlterLinux Xfce Settings'
 arch=('any')
 url='https:/fascode.net'
 source=("https://github.com/SereneTeam/${_pkgname}/archive/v${pkgver}-jp.zip")
-# depends=('alterlinux-wallpapers')
+depends=('alterlinux-wallpapers')
 conflicts=("alterlinux-xfce-conf" "alterlinux-xfce-conf-git" "alterlinux-xfce-conf-jp-git")
 sha256sums=('SKIP')
 
