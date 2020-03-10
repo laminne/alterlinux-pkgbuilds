@@ -1,15 +1,17 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
 
-pkgname=alterlinux-xfce-conf
+pkgname=alterlinux-xfce-conf-jp
+_pkgname=alterlinux-xfce-conf
 pkgver=1.0
+_pkgver="${pkgver}-jp"
 pkgrel=1
 pkgdesc='AlterLinux Xfce Settings'
 arch=('any')
 url='https:/fascode.net'
-source=("https://github.com/SereneTeam/${pkgname}/archive/v${pkgver}.zip")
+source=("https://github.com/SereneTeam/${_pkgname}/archive/v${pkgver}-jp.zip")
 # depends=('alterlinux-wallpapers')
-conflicts=("alterlinux-xfce-conf-git" "alterlinux-xfce-conf-jp" "alterlinux-xfce-conf-jp-git")
+conflicts=("alterlinux-xfce-conf" "alterlinux-xfce-conf-git" "alterlinux-xfce-conf-jp-git")
 sha256sums=('SKIP')
 
 
@@ -35,11 +37,11 @@ build () {
         fi
     }
     mkdir -p ${srcdir}/etc/skel/
-    cp -r ${srcdir}/${pkgname}-${pkgver}/* ${srcdir}/etc/skel/
-    copy ${srcdir}/${pkgname}-${pkgver}/.xinitrc ${srcdir}/etc/skel/
-    copy ${srcdir}/${pkgname}-${pkgver}/.xprofile ${srcdir}/etc/skel/
-    remove ${srcdir}/${pkgname}-${pkgver}
-    rm v${pkgver}.zip
+    cp -r ${srcdir}/${_pkgname}-${_pkgver}/* ${srcdir}/etc/skel/
+    copy ${srcdir}/${_pkgname}-${_pkgver}/.xinitrc ${srcdir}/etc/skel/
+    copy ${srcdir}/${_pkgname}-${_pkgver}/.xprofile ${srcdir}/etc/skel/
+    remove ${srcdir}/${_pkgname}-${_pkgver}
+    rm v${_pkgver}.zip
 }
 
 package () {
