@@ -10,7 +10,7 @@ arch=('any')
 url='https:/fascode.net'
 source=('git+https://github.com/SereneTeam/alterlinux-xfce-conf.git')
 # depends=('alterlinux-wallpapers')
-conflicts=("${_pkgname}")
+conflicts=("alterlinux-xfce-conf" "alterlinux-xfce-conf-jp" "alterlinux-xfce-conf-jp-git")
 sha256sums=('SKIP')
 
 pkgver() {
