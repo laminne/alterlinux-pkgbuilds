@@ -36,8 +36,8 @@ build () {
             cp -r $1 $2
         fi
     }
-    mkdir -p ${srcdir}/etc/skel/
-    cp -r ${srcdir}/${_pkgname}-${_pkgver}/* ${srcdir}/etc/skel/
+    mkdir -p ${srcdir}/etc/skel/.config
+    cp -r ${srcdir}/${_pkgname}-${_pkgver}/* ${srcdir}/etc/skel/.config
     copy ${srcdir}/${_pkgname}-${_pkgver}/.xinitrc ${srcdir}/etc/skel/
     copy ${srcdir}/${_pkgname}-${_pkgver}/.xprofile ${srcdir}/etc/skel/
     remove ${srcdir}/${_pkgname}-${_pkgver}
