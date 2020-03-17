@@ -6,9 +6,12 @@ pkgrel=1
 pkgdesc='AlterLinux wallpapers'
 arch=('any')
 url='https:/fascode.net'
-source=("alter.png")
-sha256sums=('SKIP')
+source=("alter.png" 
+        "alter-old.png")
+md5sum=('75bbf3e0c33d0d7f4e09e9a5489691ff'
+        '42b477468bc5d88825b41e8522552ad3')
 package() {
     cd "${srcdir}"
     install -Dm644 "${srcdir}/alter.png" "${pkgdir}/usr/share/backgrounds/alter.png"
+    install -Dm644 "${srcdir}/alter-old.png" "${pkgdir}/usr/share/backgrounds/alter-old.png"
 }

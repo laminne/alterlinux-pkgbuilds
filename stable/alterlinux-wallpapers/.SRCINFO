@@ -1,0 +1,11 @@
+pkgbase = alterlinux-wallpapers
+	pkgdesc = AlterLinux wallpapers
+	pkgver = 1.0
+	pkgrel = 1
+	url = https:/fascode.net
+	arch = any
+	source = alter.png
+	source = alter-old.png
+
+pkgname = alterlinux-wallpapers
+
