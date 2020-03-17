@@ -8,7 +8,7 @@ arch=('any')
 url='https:/fascode.net'
 source=("alter.png" 
         "alter-old.png")
-md5sum=('75bbf3e0c33d0d7f4e09e9a5489691ff'
+md5sums=('75bbf3e0c33d0d7f4e09e9a5489691ff'
         '42b477468bc5d88825b41e8522552ad3')
 package() {
     cd "${srcdir}"
