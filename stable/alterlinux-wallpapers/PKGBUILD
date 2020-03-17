@@ -1,7 +1,7 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
 pkgname=alterlinux-wallpapers
-pkgver=1.0
+pkgver=2.0
 pkgrel=1
 pkgdesc='AlterLinux wallpapers'
 arch=('any')
