@@ -3,7 +3,7 @@
 
 _pkgname=alterlinux-xfce-conf
 pkgname=alterlinux-xfce-conf-git
-pkgver=r4.9b7990a
+pkgver=r5.dc1952b
 pkgrel=1
 pkgdesc='AlterLinux Xfce Settings'
 arch=('any')
