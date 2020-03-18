@@ -1,8 +1,9 @@
 # Maintainer: lap1sid <development@fascode.net>
 
 pkgname=alterlinux-calamares
-pkgver=3.2.20
-pkgrel=4
+pkgver=3.2.21
+pkgrel=1
+_pkgrel='b1'
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -17,8 +18,8 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
-#source+=("$url/archive/$pkgver.tar.gz")
+#source+=("$url/archive/$pkgver-$pkgrel.tar.gz")
+source+=("$url/archive/$pkgver-$_pkgrel.tar.gz")
 
 sha256sums=('SKIP')
 
