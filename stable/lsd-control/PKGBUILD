@@ -1,0 +1,10 @@
+# Maintainer : Yamada Hayao <development@fascode.net>
+# Maintainer : lap1sid <development@fascode.net>
+
+pkgname=lsd-control
+pkgver=1.0
+pkgrel=1
+pkgdesc='lsd command controller'
+arch=('any')
+url='https:/fascode.net'
+source=("")
