@@ -2,7 +2,7 @@
 # Maintainer : lap1sid <development@fascode.net>
 
 pkgname=alterlinux-xfce-conf
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='AlterLinux Xfce Settings'
 arch=('any')
