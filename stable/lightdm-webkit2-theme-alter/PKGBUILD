@@ -11,7 +11,7 @@ license=('MIT')
 depends=('lightdm' 'lightdm-webkit2-greeter')
 optdepends=()
 source=("https://github.com/SereneTeam/${_pkgname}/archive/v${pkgver}.zip")
-md5sums=('8abab01108fac28825a0304105722364')
+md5sums=('3bed423ff4eb7d88e4ab47b546e51f59')
 conflicts=('lightdm-webkit2-theme-alter-git')
 
 build () {
