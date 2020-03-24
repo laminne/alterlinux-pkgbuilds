@@ -2,7 +2,7 @@
 
 pkgname=lightdm-webkit2-theme-alter
 _pkgname=lightdm-webkit2-theme-alter
-pkgver=2.0
+pkgver=3.0
 pkgrel=1
 pkgdesc="AlterLinux webkit2 greeter theme"
 arch=('any')
