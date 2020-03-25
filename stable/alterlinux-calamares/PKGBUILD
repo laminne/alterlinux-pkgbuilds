@@ -2,8 +2,8 @@
 
 pkgname=alterlinux-calamares
 pkgver=3.2.21
-pkgrel=1
-_pkgrel='b1'
+pkgrel=2
+_pkgrel='b2'
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
