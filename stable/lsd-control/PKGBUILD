@@ -3,14 +3,14 @@
 
 pkgname=lsd-control
 _gitname=lsdcontrol
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc='lsd command controller'
 arch=('any')
 url='https:/fascode.net'
 depends=('lsd')
 source=("https://github.com/SereneTeam/lsdcontrol/archive/v${pkgver}.zip")
-md5sums=('657c5dbb68221dcedbeea6dea8495a2f')
+md5sums=('815e34fa9e8dbbe41b362016073eeda3')
 conflicts=('lsd-control-git')
 
 package() {
