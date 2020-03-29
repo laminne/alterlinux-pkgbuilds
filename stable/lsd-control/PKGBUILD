@@ -10,7 +10,7 @@ arch=('any')
 url='https:/fascode.net'
 depends=('lsd')
 source=("https://github.com/SereneTeam/lsdcontrol/archive/v${pkgver}.zip")
-md5sums=('815e34fa9e8dbbe41b362016073eeda3')
+md5sums=('299a27da187776d23cb80deea667baee')
 conflicts=('lsd-control-git')
 
 package() {
