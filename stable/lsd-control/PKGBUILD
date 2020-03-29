@@ -8,6 +8,7 @@ pkgrel=1
 pkgdesc='lsd command controller'
 arch=('any')
 url='https:/fascode.net'
+depends=('lsd')
 source=("https://github.com/SereneTeam/lsdcontrol/archive/v${pkgver}.zip")
 md5sums=('657c5dbb68221dcedbeea6dea8495a2f')
 conflicts=('lsd-control-git')
