@@ -2,9 +2,19 @@
 # Maintainer : lap1sid <development@fascode.net>
 
 pkgname=lsd-control
+_gitname=lsdcontrol
 pkgver=1.0
 pkgrel=1
 pkgdesc='lsd command controller'
 arch=('any')
 url='https:/fascode.net'
-source=("")
+source=("https://github.com/SereneTeam/lsdcontrol/archive/v${pkgver}.zip")
+md5sums=('657c5dbb68221dcedbeea6dea8495a2f')
+conflicts=('lsd-control-git')
+
+package() {
+        cd "${_gitname}-${pkgver}" &&
+        install -m 755 -D lsd-alias "${pkgdir}/usr/local/lib/lsd-alias"
+        install -m 755 -D lsd-control "${pkgdir}/usr/local/bin/lsd-control"
+}
+
