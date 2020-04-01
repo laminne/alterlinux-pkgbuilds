@@ -2,13 +2,13 @@
 # Maintainer : lap1sid <development@fascode.net>
 
 pkgname=alterlinux-xfce-conf
-pkgver=1.2
+pkgver=1.3
 pkgrel=1
 pkgdesc='AlterLinux Xfce Settings'
 arch=('any')
 url='https:/fascode.net'
 source=("https://github.com/SereneTeam/${pkgname}/archive/v${pkgver}.zip")
-depends=('alterlinux-wallpapers')
+depends=('alterlinux-wallpapers' 'nerd-fonts-source-code-pro')
 conflicts=("alterlinux-xfce-conf-git")
 sha256sums=('SKIP')
 

@@ -10,7 +10,7 @@ arch=('any')
 url='https:/fascode.net'
 source=('git+https://github.com/SereneTeam/alterlinux-xfce-conf.git')
 depends=('alterlinux-wallpapers')
-conflicts=("alterlinux-xfce-conf")
+conflicts=("alterlinux-xfce-conf" "nerd-fonts-source-code-pro")
 sha256sums=('SKIP')
 
 pkgver() {
