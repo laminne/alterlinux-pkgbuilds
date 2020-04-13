@@ -3,7 +3,7 @@
 
 pkgname=lsd-control
 _gitname=lsdcontrol
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='lsd command controller'
 arch=('any')
