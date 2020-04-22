@@ -23,7 +23,8 @@ package() {
     mkdir -p "${pkgdir}/etc/eg-installer/"
     cp "${srcdir}/config" "${pkgdir}/etc/eg-installer/"
     cp "${srcdir}/${_pkgname}/pacapt" "${pkgdir}/etc/eg-installer/"
-    cp -r "${srcdir}/${_pkgname}/softwares/" "${pkgdir}/etc/eg-installer/"
+    # cp -r "${srcdir}/${_pkgname}/softwares/" "${pkgdir}/etc/eg-installer/"
+  
     mkdir -p "${pkgdir}/usr/bin/"
     cp "${srcdir}/${_pkgname}/eg-installer" "${pkgdir}/usr/bin/"
 }
