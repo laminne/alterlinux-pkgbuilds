@@ -7,8 +7,11 @@
 # YamaD
 Server = https://xn--d-8o2b.com/repo/$repo/$arch
 
-# OSDN
+# OSDN-SereneLinux
 Server = https://ja.osdn.net/projects/serene/storage/repo/$repo/$arch
+
+# OSDN-AlterLinux
+Server = https://osdn.net/projects/alterlinux/storage/repo/$repo/$arch
 
 # Hayao
 Server = https://h.0u0.biz/repo/$repo/$arch
