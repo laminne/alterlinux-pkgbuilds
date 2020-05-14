@@ -29,7 +29,7 @@ package() {
     install -Dm644 "${srcdir}/alter-jiju.png" "${pkgdir}/usr/share/backgrounds/alter-jiju.png"
 
     install -Dm755 "${srcdir}/alterlinux-wallpapers-xfce" "${pkgdir}/usr/share/libalpm/scripts/alterlinux-wallpapers-xfce"
-    set -x
+
     local hook
     for hook in $(ls ${srcdir}/*.hook); do
         install -Dm755 "${srcdir}/$(basename ${hook})" "${pkgdir}/usr/share/libalpm/hooks/$(basename ${hook})"
