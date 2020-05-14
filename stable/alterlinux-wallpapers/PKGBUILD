@@ -18,10 +18,10 @@ md5sums=('75bbf3e0c33d0d7f4e09e9a5489691ff'
         '42b477468bc5d88825b41e8522552ad3'
         'ca58c394911aa211c5712fabbad23fe2'
 
-        "8a3dd68a46601c455fae4f0306193e00"
-        "79323d271c0f71a02816c410745eb6fd"
-        "a50f70827c35d55769e8973b7af44bc5"
-        "b2309c794fb484537c960237d98eb617")
+        "845f106696fbac435126babebd728185"
+        "e05b85d07afede613e2a3f7e8e5ee2d4"
+        "1c55857c4ab27651ce4db065814df1f0"
+        "768f565556b2a8bb92696cb16565e06a")
 package() {
     cd "${srcdir}"
     install -Dm644 "${srcdir}/alter.png" "${pkgdir}/usr/share/backgrounds/alter.png"
