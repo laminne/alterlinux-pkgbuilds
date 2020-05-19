@@ -10,6 +10,7 @@ url='https://github.com/FascodeNet/alterlinux'
 branch="dev"
 source=("git+https://github.com/FascodeNet/alterlinux.git#branch=${branch}")
 md5sums=('SKIP')
+depends=("git" "make" "arch-install-scripts" "squashfs-tools" "libisoburn" "dosfstools")
 
 pkgver() {
     cd "${_pkgname}"
