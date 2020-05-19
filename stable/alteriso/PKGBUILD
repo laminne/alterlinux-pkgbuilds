@@ -1,0 +1,68 @@
+# Maintainer : Yamada Hayao <hayao@fascode.net>
+
+pkgname=alteriso-git
+_pkgname=alterlinux
+pkgver=20Q1.2.0.r266.g40049e7
+pkgrel=1
+pkgdesc=' ArchLinux-derived OS made in Japan aimed at being usable by anyone'
+arch=('any')
+url='https://github.com/FascodeNet/alterlinux'
+branch="dev"
+source=("git+https://github.com/FascodeNet/alterlinux.git#branch=${branch}")
+md5sums=('SKIP')
+
+pkgver() {
+    cd "${_pkgname}"
+    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+
+package() {
+    # Doc
+    mkdir -p "${pkgdir}/usr/share/doc/alteriso"
+    cp -r "${srcdir}/alterlinux/docs/" "${pkgdir}/usr/share/doc/alteriso/"
+    cp -r "${srcdir}/alterlinux/images/" "${pkgdir}/usr/share/doc/alteriso/"
+    chmod 644 -R "${pkgdir}/usr/share/doc/alteriso"
+
+    # mkalteriso
+    mkdir -p "${pkgdir}/usr/bin"
+    cp "${srcdir}/alterlinux/system/mkalteriso" "${pkgdir}/usr/bin"
+
+    # build.sh
+    mkdir -p "${pkgdir}/usr/share/alteriso"
+    cp "${srcdir}/alterlinux/build.sh" "${pkgdir}/usr/share/alteriso/build.sh"
+
+    # keyring.sh
+    cp "${srcdir}/alterlinux/keyring.sh" "${pkgdir}/usr/share/alteriso/keyring.sh"
+
+    # wizard.sh
+    cp "${srcdir}/alterlinux/wizard.sh" "${pkgdir}/usr/share/alteriso/wizard.sh"
+
+    # channels
+    cp -r "${srcdir}/alterlinux/channels" "${pkgdir}/usr/share/alteriso/"
+
+    # efiboot
+    cp -r "${srcdir}/alterlinux/efiboot" "${pkgdir}/usr/share/alteriso/"
+
+    # mkinitcpio
+    cp -r "${srcdir}/alterlinux/mkinitcpio" "${pkgdir}/usr/share/alteriso/"
+
+    # syslinux
+    cp -r "${srcdir}/alterlinux/syslinux" "${pkgdir}/usr/share/alteriso/"
+
+    # system
+    cp -r "${srcdir}/alterlinux/system" "${pkgdir}/usr/share/alteriso/"
+
+    # config
+    cp "${srcdir}/alterlinux/config" "${pkgdir}/usr/share/alteriso/"
+    echo "mkalteriso=\"/usr/bin/mkalteriso\"" >> "${pkgdir}/usr/share/alteriso/config"
+
+    # replace code
+    sed -i "s@script_path=".*"@script_path="/usr/share/alteriso"@g" "${pkgdir}/usr/share/alteriso/build.sh"
+    sed -i "s@script_path=".*"@script_path="/usr/share/alteriso"@g" "${pkgdir}/usr/share/alteriso/wizard.sh"
+    sed -i "s@script_path=".*"@script_path="/usr/share/alteriso"@g" "${pkgdir}/usr/share/alteriso/keyring.sh"
+
+    # link
+    ln -s /usr/share/alteriso/build.sh "${pkgdir}/usr/bin/alteriso"
+
+}
