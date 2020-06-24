@@ -1,23 +1,14 @@
-pkgbase = alterlinux-wallpapers
-	pkgdesc = AlterLinux wallpapers
+pkgbase = IchiyOS-wallpapers
+	pkgdesc = IchiyOS wallpapers
 	pkgver = 3.0
 	pkgrel = 3
-	url = https:/fascode.net
+	url = https://approvers.dev
 	arch = any
-	source = alter.png
-	source = alter-old.png
-	source = alter-jiju.png
-	source = alterlinux-wallpapers-xfce
-	source = alterlinux-wallpapers-xfce-blue.hook
-	source = alterlinux-wallpapers-xfce-stripes.hook
-	source = alterlinux-wallpapers-xfce-teal.hook
-	md5sums = 75bbf3e0c33d0d7f4e09e9a5489691ff
-	md5sums = 42b477468bc5d88825b41e8522552ad3
-	md5sums = ca58c394911aa211c5712fabbad23fe2
-	md5sums = 8a3dd68a46601c455fae4f0306193e00
-	md5sums = 79323d271c0f71a02816c410745eb6fd
-	md5sums = a50f70827c35d55769e8973b7af44bc5
-	md5sums = b2309c794fb484537c960237d98eb617
+	source = ichiyo-approves.png
+    source = alterlinux-wallpapers-xfce
 
-pkgname = alterlinux-wallpapers
+	md5sums = af6fe8a1fba1f52de9f059305685e7014581353d
+	md5sums = f0b6106f9efc0e6676ff353a1458610a88e42de6
+
+pkgname = IchiyOS-wallpapers
 

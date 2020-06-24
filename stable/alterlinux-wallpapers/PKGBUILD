@@ -1,35 +1,23 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
-pkgname=alterlinux-wallpapers
+# Changed by: Laminne33569 <laminne33569@approvers.dev>
+pkgname=IchiyOS-wallpapers
 pkgver=4.0
 pkgrel=1
-pkgdesc='AlterLinux wallpapers'
+pkgdesc='IchiyOS wallpapers'
 arch=('any')
-url='https:/fascode.net'
-source=("alter.png" 
-        "alter-old.png"
-        "alter-jiju.png"
-        "alter-nochr.png"
+url='https://approvers.dev'
+source=("ichiyo-approvers.png"
         
-        "alterlinux-wallpapers-xfce"
-        "alterlinux-wallpapers-xfce-blue.hook"
-        "alterlinux-wallpapers-xfce-stripes.hook"
-        "alterlinux-wallpapers-xfce-teal.hook")
-md5sums=('75bbf3e0c33d0d7f4e09e9a5489691ff'
-        '42b477468bc5d88825b41e8522552ad3'
-        'ca58c394911aa211c5712fabbad23fe2'
-        'aea503af241273d8773b4abefee8992e'
+        "alterlinux-wallpapers-xfce")
+md5sums=("af6fe8a1fba1f52de9f059305685e7014581353d"
 
-        "845f106696fbac435126babebd728185"
-        "e05b85d07afede613e2a3f7e8e5ee2d4"
-        "1c55857c4ab27651ce4db065814df1f0"
-        "768f565556b2a8bb92696cb16565e06a")
+        "f0b6106f9efc0e6676ff353a1458610a88e42de6"
+)
 package() {
     cd "${srcdir}"
-    install -Dm644 "${srcdir}/alter.png" "${pkgdir}/usr/share/backgrounds/alter.png"
-    install -Dm644 "${srcdir}/alter-old.png" "${pkgdir}/usr/share/backgrounds/alter-old.png"
-    install -Dm644 "${srcdir}/alter-jiju.png" "${pkgdir}/usr/share/backgrounds/alter-jiju.png"
-    install -Dm644 "${srcdir}/alter-nochr.png" "${pkgdir}/usr/share/backgrounds/alter-nochr.png"
+    install -Dm644 "${srcdir}/ichiyo-approvers.png" "${pkgdir}/usr/share/backgrounds/ichiyo-approves.png"
+
 
     install -Dm755 "${srcdir}/alterlinux-wallpapers-xfce" "${pkgdir}/usr/share/libalpm/scripts/alterlinux-wallpapers-xfce"
 
