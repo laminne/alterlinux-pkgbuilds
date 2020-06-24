@@ -2,15 +2,15 @@
 # Maintainer : lap1sid <development@fascode.net>
 
 pkgname=IchiyOS-xfce-conf
-pkgver=2.1
+pkgver=1.7
 pkgrel=1
 pkgdesc='IchiyOS Xfce Settings'
 arch=('any')
 url='https://approvers.dev'
-source=("https://github.com/laminne/${pkgname}/archive/v${pkgver}.zip")
+source=("https://github.com/laminne/${pkgname}/archive/${pkgver}.zip")
 depends=('alterlinux-wallpapers' 'nerd-fonts-source-code-pro')
-conflicts=("alterlinux-xfce-conf-git")
-md5sums=('7cfd0a3cb90d31fc91d16c19f94408b6')
+conflicts=("IchiyOS-xfce-conf-git")
+md5sums=('759847da498a16210152b7bfedbc021862f76365')
 
 
 build () {
