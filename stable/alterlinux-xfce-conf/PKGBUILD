@@ -1,13 +1,13 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
 
-pkgname=alterlinux-xfce-conf
-pkgver=1.6
+pkgname=IchiyOS-xfce-conf
+pkgver=2.1
 pkgrel=1
-pkgdesc='AlterLinux Xfce Settings'
+pkgdesc='IchiyOS Xfce Settings'
 arch=('any')
-url='https:/fascode.net'
-source=("https://github.com/SereneTeam/${pkgname}/archive/v${pkgver}.zip")
+url='https://approvers.dev'
+source=("https://github.com/laminne/${pkgname}/archive/v${pkgver}.zip")
 depends=('alterlinux-wallpapers' 'nerd-fonts-source-code-pro')
 conflicts=("alterlinux-xfce-conf-git")
 md5sums=('7cfd0a3cb90d31fc91d16c19f94408b6')
