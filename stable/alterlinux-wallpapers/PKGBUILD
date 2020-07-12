@@ -10,10 +10,7 @@ url='https://approvers.dev'
 source=("ichiyo-approvers.png"
         
         "alterlinux-wallpapers-xfce")
-md5sums=("af6fe8a1fba1f52de9f059305685e7014581353d"
-
-        "f0b6106f9efc0e6676ff353a1458610a88e42de6"
-)
+md5sums=(SKIP)
 package() {
     cd "${srcdir}"
     install -Dm644 "${srcdir}/ichiyo-approvers.png" "${pkgdir}/usr/share/backgrounds/ichiyo-approves.png"
