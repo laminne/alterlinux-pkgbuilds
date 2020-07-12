@@ -7,13 +7,13 @@ pkgrel=1
 pkgdesc='IchiyOS wallpapers'
 arch=('any')
 url='https://approvers.dev'
-source=("ichiyo-approvers.png"
+source=("ichiyo-approves.png"
         
         "alterlinux-wallpapers-xfce")
 md5sums=('SKIP')
 package() {
     cd "${srcdir}"
-    install -Dm644 "${srcdir}/ichiyo-approvers.png" "${pkgdir}/usr/share/backgrounds/ichiyo-approves.png"
+    install -Dm644 "${srcdir}/ichiyo-approves.png" "${pkgdir}/usr/share/backgrounds/ichiyo-approves.png"
 
 
     install -Dm755 "${srcdir}/alterlinux-wallpapers-xfce" "${pkgdir}/usr/share/libalpm/scripts/alterlinux-wallpapers-xfce"
