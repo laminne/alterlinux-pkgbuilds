@@ -1,6 +1,7 @@
-# Maintainer : Yamada Hayao <development@fascode.net>
-# Maintainer : lap1sid <development@fascode.net>
-pkgname=alterlinux-mirrorlist
+#Maintainer: Laminne33569 <laminne33569@approvers.dev>
+# Contributor : Yamada Hayao <development@fascode.net>
+# Contributor  : lap1sid <development@fascode.net>
+pkgname=swilner-mirrorlist
 pkgver=20200426
 pkgrel=1
 pkgdesc='AlterLinux repository mirrorlists'

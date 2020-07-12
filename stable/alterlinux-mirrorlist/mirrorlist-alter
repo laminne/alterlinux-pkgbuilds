@@ -15,3 +15,6 @@ Server = https://osdn.net/projects/alterlinux/storage/repo/$repo/$arch
 
 # Hayao
 Server = https://h.0u0.biz/repo/$repo/$arch
+
+#laminne
+Server = https://repo.approvers.dev/repo/$repo/$arch

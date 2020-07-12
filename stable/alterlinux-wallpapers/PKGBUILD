@@ -1,16 +1,14 @@
 # Maintainer : Yamada Hayao <development@fascode.net>
 # Maintainer : lap1sid <development@fascode.net>
 # Changed by: Laminne33569 <laminne33569@approvers.dev>
-pkgname=IchiyOS-wallpapers
+pkgname=Swilner-wallpapers
 pkgver=4.0
 pkgrel=1
-pkgdesc='IchiyOS wallpapers'
+pkgdesc='Swilner wallpapers'
 arch=('any')
 url='https://approvers.dev'
-source=("ichiyo-approves.png"
-        
-        "alterlinux-wallpapers-xfce")
-md5sums=('SKIP')
+source=("ichiyo-approves.png"  "alterlinux-wallpapers-xfce")
+md5sums=('feecd656e60f577b9fcaad0ab4fdfa69' '845f106696fbac435126babebd728185')
 package() {
     cd "${srcdir}"
     install -Dm644 "${srcdir}/ichiyo-approves.png" "${pkgdir}/usr/share/backgrounds/ichiyo-approves.png"

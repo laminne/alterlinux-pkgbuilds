@@ -1,6 +1,6 @@
 # Maintainer: lap1sid <development@fascode.net>
 
-pkgname=alterlinux-calamares
+pkgname=swilnerlinux-calamares
 pkgver=3.2.27
 pkgrel=2
 _pkgrel='b2'
